@@ -1,0 +1,27 @@
+#row {
+    position: absol;
+    margin-top: 2%;
+    margin-left: 15%;
+    
+}
+
+#boton2{
+    position: absolute;
+    width: 20%;
+    top: 85%;
+    right: 50%;
+    left: 48%;    
+    transform: translate(-50%, -50%);
+    background-color: #0096cc;
+    color: white;
+    border-radius: 4px;
+}
+#imagen-banda{
+    width: 70%;
+    height: 60%;
+    position: absolute;
+    margin-top: 27%;
+    margin-left: 43%;
+    transform: translate(-50%, -50%);
+}
+

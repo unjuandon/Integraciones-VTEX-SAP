@@ -1,0 +1,15 @@
+#imagen-invoice{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  margin-top: 35%;
+  margin-left: 43%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+#boton2{
+  margin-top: 25%;
+  margin-left: 45%;
+  background-color: #0096cc;
+}
