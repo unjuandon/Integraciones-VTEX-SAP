@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { CancelService } from '../services/cancel.service';
 
 @Component({
   selector: 'app-cancel-order',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cancel-order.component.css']
 })
 export class CancelOrderComponent implements OnInit {
-  accountName ='';
+  account ='';
   environment ='';
   orderId= '';
   vtexApiKey='';
@@ -14,13 +16,33 @@ export class CancelOrderComponent implements OnInit {
   reason='';
 
 
-  cancelOrder(){
-    alert('orden cancelada');
-  }
 
-  constructor() { }
+
+  constructor(private cancelService:CancelService) { }
 
   ngOnInit(): void {
   }
 
-}
+  cancelOr(){
+
+
+    let confirmacion = prompt("desea cancelar su pedido?", "si")
+
+    if(confirmacion == "si")
+    {
+      this.cancelService.cancelOrder(this.account,this.orderId, this.vtexApiKey, this.vtexApiToken, this.reason).subscribe(data => 
+        console.log(data))
+      console.log(this.account, this.orderId, this.vtexApiKey, this.vtexApiToken)
+      
+      alert('se ha cancelado su pedido');
+    }
+
+    else{
+      alert('NO se ha cancelado su pedido');
+    }
+    }
+
+    
+  }
+
+

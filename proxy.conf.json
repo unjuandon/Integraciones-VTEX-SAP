@@ -1,0 +1,10 @@
+{
+    "/api": {
+      "target": "https://mqaenvironment.vtexcommercestable.com.br",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }

@@ -1,6 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { FeedService } from '../services/feed.service';
+import { ngxCsv } from 'ngx-csv';
+
+
+
+
+
+
+
+var options = { 
+  fieldSeparator: ';',
+  quoteStrings: '"',
+  decimalseparator: '.',
+  showLabels: false, 
+  showTitle: false,
+  title: 'Your title',
+  useBom: true,  
+  noDownload: false, 
+  headers: [],
+  useHeader: false,
+  nullToEmptyString: false,
+};
+
+
+
+
 
 
 @Component({
@@ -19,16 +44,14 @@ vtexApiToken=''
 
 
 
+
+
 constructor(private feedService: FeedService)
-{
+{ 
+ 
 
 }
-
-
-  
-
-
-  // arrFeed: any[];
+ // arrFeed: any[];
 
 
 //   getFeed()
@@ -48,13 +71,6 @@ constructor(private feedService: FeedService)
 //   .catch(err => console.error('error:' + err));
 //   alert('feed consultado')
 //   }
-
-
-
-
-
- 
-
   ngOnInit(){
 
   }
@@ -63,16 +79,30 @@ constructor(private feedService: FeedService)
   obtenerFeed()
   {
     
-    this.feedService.getFeed(this.account, this.environment, this.maxLot, this.vtexApiKey, this.vtexApiToken).subscribe(data => 
-      console.log(data))
+     var csvFeed=this.feedService.getFeed(this.account,this.maxLot, this.vtexApiKey, this.vtexApiToken).subscribe(res => {
+      console.log(res);
+      var res = res;
+      var data = [{
+      }];
 
-      console.log(this.account, this.environment, this.maxLot, this.vtexApiKey, this.vtexApiToken)
+      const dataFinal = data.push(res);
+
+      // console.log(dataFinal)
+
+      console.log(data[1]);
+    
+      var create = new ngxCsv(data[1], 'jerejá', options);
+      console.log(create);
+      console.log(data[1]);
+
+     })
   }
-
-
-  onCsv(){
-
-  }
-
-
 }
+
+     
+
+      
+  
+
+
+
