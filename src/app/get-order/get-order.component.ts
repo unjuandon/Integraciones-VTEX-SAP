@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource, _MatTableDataSource } from '@angular/material/table';
 import {  MatTableModule } from 'angular-material'
+
 import { ngxCsv } from 'ngx-csv';
 import { delay } from 'rxjs';
 
@@ -15,15 +16,14 @@ import { GetOrderService } from '../services/get-order.service';
 
 
 var options = { 
-  fieldSeparator: ';',
-  quoteStrings: '"',
+  fieldSeparator: ";",
   decimalseparator: '.',
   showLabels: false, 
   showTitle: false,
-  title: 'Your title',
+  title: false,
   useBom: true,  
   noDownload: false, 
-  headers: [],
+  headers:  false,
   useHeader: false,
   nullToEmptyString: false,
 };
@@ -70,18 +70,68 @@ export class GetOrderComponent implements OnInit {
 
 
   getOrder(){
-   var csv = this.getOrderService.getOrderService(this.accountName, this.orderId, this.vtexApiKey, this.vtexApiToken).subscribe( res  =>{
-   console.log(res);   
+   var csv = this.getOrderService.getOrderService(this.accountName, this.orderId, this.vtexApiKey, this.vtexApiToken).subscribe( res  =>{ 
+    var aux = ["",res.orderId,
+     "",
+     res.clientProfileData.document,
+     res.creationDate,
+     res.shippingData.address.receiverName, 
+     res.shippingData.address.street, 
+     res.shippingData.address.postalCode,
+     res.shippingData.address.state, 
+     res.shippingData.address.country,
+     res.clientProfileData.phone,
+     "",
+     res.clientProfileData.email, 
+     res.clientProfileData.document,
+     res.clientProfileData.firstName,
+     res.clientProfileData.lastName,
+     res.shippingData.address.street,
+     res.shippingData.address.postalCode,
+     res.shippingData.address.state,
+     res.shippingData.address.country,    
+     res.clientProfileData.phone,
+     "",
+     res.clientProfileData.email,
+     "",
+     "",
+     res.items[0].productId,
+     res.items[0].quantity,
+     res.items[0].costPrice,
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+     ] ;
+    console.log(res.items[0])
     var res = res;
+    
     var data = [{              
     }];
-    const dataFinal = data.push(res);
+    const dataFinal = data.push(aux);
+     
 
-    console.log(data[0]);
+    
+    var hoy = new Date();
+
+
+    var hora = hoy.getDate() + '_' + hoy.getHours() + '_' + hoy.getMinutes() 
 
 
 
-    var create = new ngxCsv(data,'helloooo', options)
+
+
+
+    var nombre = JSON.stringify(hora)
+
+    console.log(nombre)
+
+
+    var create = new ngxCsv(data,'helloooo'+'_'+ 'Día:'+hoy.getDate()+'Hora:'+ hoy.getHours() + 'Minuto:' + hoy.getMinutes() , options)
     console.log(create)
     console.log(data)
   

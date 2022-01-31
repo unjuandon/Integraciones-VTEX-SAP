@@ -51,26 +51,7 @@ constructor(private feedService: FeedService)
  
 
 }
- // arrFeed: any[];
 
-
-//   getFeed()
-//   {
-//   const url = 'https://mqaenvironment.vtexcommercestable.com.br/api/orders/feed/config';
-//   const options = {
-//   method: 'GET',
-//   headers: {'Content-Type': 'application/json', Accept: 'application/json',
-//   'X-VTEX-API-AppKey': 'vtexappkey-mqaenvironment-ODNKOY',
-//   'X-VTEX-API-AppToken': 'IHQBLPMKKNZGUIVFHTZAFEISDZGVWFOZJCAPQPIAUUWMYZBLVGQMSFLEYYYMIQOEZAWRIGORLZFKIWTDXVAPPBHEQVRSQWREFRNYCKDPSZBSZAVCEVONPYPXTSAMOVAP'
-// }
-// };
-
-//  fetch(url, options)
-//   .then(res => res.json())
-//   .then(json => console.log(json))
-//   .catch(err => console.error('error:' + err));
-//   alert('feed consultado')
-//   }
   ngOnInit(){
 
   }
