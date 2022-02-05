@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource, _MatTableDataSource } from '@angular/material/table';
 import {  MatTableModule } from 'angular-material'
+import "@ui5/webcomponents/dist/Button.js";
+import "@ui5/webcomponents/dist/Label.js";
+import "@ui5/webcomponents/dist/Input.js";
+
 
 import { ngxCsv } from 'ngx-csv';
 import { delay } from 'rxjs';
@@ -18,10 +22,11 @@ import { GetOrderService } from '../services/get-order.service';
 var options = { 
   fieldSeparator: ";",
   decimalseparator: '.',
+  quoteStrings:'',
   showLabels: false, 
   showTitle: false,
   title: false,
-  useBom: true,  
+  useBom: false,  
   noDownload: false, 
   headers:  false,
   useHeader: false,
@@ -60,10 +65,9 @@ export class GetOrderComponent implements OnInit {
   }
 
 
-
-
-
-
+  getNombre(){
+    console.log(this.accountName)
+  }
 
 
 
@@ -112,86 +116,24 @@ export class GetOrderComponent implements OnInit {
     
     var data = [{              
     }];
-    const dataFinal = data.push(aux);
-     
-
+    const dataFinal = data.push(aux);  
     
     var hoy = new Date();
 
-
     var hora = hoy.getDate() + '_' + hoy.getHours() + '_' + hoy.getMinutes() 
-
-
-
-
-
 
     var nombre = JSON.stringify(hora)
 
     console.log(nombre)
 
+    var create = new ngxCsv(data,res.orderId+'_'+ 'Día:'+hoy.getDate()+'Hora:'+ hoy.getHours() + 'Minuto:' + hoy.getMinutes() , options)
 
-    var create = new ngxCsv(data,'helloooo'+'_'+ 'Día:'+hoy.getDate()+'Hora:'+ hoy.getHours() + 'Minuto:' + hoy.getMinutes() , options)
     console.log(create)
+
     console.log(data)
   
   })
 }
-
-
-
-    // console.log(data)
-
-    // var obj = res;
-
-    // console.log(data)
-
-    // var temp = JSON.stringify(obj)
-
-    // console.log(temp)
-    // console.log(typeof temp)
-
-    
-
-    // var create = new ngxCsv(data,'helloooo')
-    // console.log(create)
-    // console.log(data)
-    // })
-
-
-
-    // new ngxCsv(temp, 'hello again')
-
-    // var data = [{
-    //   csv:{}
-    // }]
-
-    // new ngxCsv(csv ,'otra prueba', options)
-    // console.log(csv)
-    
-    // console.log(data);
-    // var Order = JSON.stringify(data)
-    // var parsed = JSON.parse(Order)    
-    // alert(Order)  
-    // })
-      
-      
- 
-
-    
-    
-   
-  
-
-
- 
-  
-
-
-  // public getAllOrders(){
-  //   let response=this.getOrderService.getOrderService(this.accountName, this.orderId, this.vtexApiKey, this.vtexApiToken);
-  //   response.subscribe(order=>this.dataSource.data=order as OrderReports[])
-  // }
 
 
 }

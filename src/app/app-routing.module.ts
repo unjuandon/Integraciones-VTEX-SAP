@@ -7,6 +7,8 @@ import {RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { StartHandlingComponent } from './start-handling/start-handling.component';
 import { InvoiceComponent } from './invoice/invoice.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { PricesListComponent } from './prices-list/prices-list.component';
 
 const routes : Routes = [
   {path: '', pathMatch:'full',redirectTo:'/home'},
@@ -16,6 +18,8 @@ const routes : Routes = [
   { path: 'get-order', component: GetOrderComponent },
   { path: 'start-handling', component: StartHandlingComponent},
   {path: 'invoice', component: InvoiceComponent},
+  {path: 'inventory', component: InventoryComponent},
+  {path: 'prices-list', component: PricesListComponent}
 
 
 ];
