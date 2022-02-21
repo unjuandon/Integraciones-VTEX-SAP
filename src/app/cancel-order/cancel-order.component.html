@@ -1,5 +1,5 @@
-<img id="imagen-cancel" src="../../assets/cancel-order.png">
-<div class="row" id="row">
+<!-- <img id="imagen-cancel" src="../../assets/cancel-order.png"> -->
+<!-- <div class="row" id="row">
     <div class="col s10">
       <div class="row">
         <div class="input-field col s4">
@@ -35,4 +35,25 @@
       </div>
     </div>
   </div>
-  <a class="waves-effect waves-light btn"  id="boton2" (click)="cancelOr()">cancel order</a>
+  <a class="waves-effect waves-light btn"  id="boton2" (click)="cancelOr()">cancel order</a> -->
+
+  <h3 style="text-align: center;">Cancel order</h3>
+  <h6 style="text-align: center;">You should use this integration to cancel an order by its order identification number (the orderId).</h6>
+
+  <ui5-input [(ngModel)]="account" id="accountI" placeholder="accountName*" origami></ui5-input>
+
+  <ui5-input [(ngModel)]="environment" id="environmentI" placeholder="environment*" origami></ui5-input>
+
+  <ui5-input [(ngModel)]="orderId" id="orderI" placeholder="order Id*" origami></ui5-input>
+
+  <ui5-input [(ngModel)]="vtexApiKey" id="apiKeyI" placeholder="vtexApikey*" origami></ui5-input>
+
+  <ui5-input [(ngModel)]="vtexApiToken" id="apiTokenI" placeholder="vtexApiToken*" origami></ui5-input>
+
+  <ui5-input [(ngModel)]="reason" id="reasonI" placeholder="Reason*" origami></ui5-input>
+  <br>
+  <br>
+  <ui5-button class="boton2" design="Negative" (click)= "cancelOr()">Cancel</ui5-button>
+  <br>
+
+

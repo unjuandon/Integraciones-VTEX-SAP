@@ -1,94 +1,32 @@
 
 
-<h3>Updates inventory for a given SKU and warehouse.</h3>
+<h3 style="text-align:center">Updates inventory for a given SKU and warehouse.</h3>
+<h6 style="text-align: center;">Updates inventory by searching through SKU and warehouse.</h6>
 
 
-<!-- 
-<div class="contenedor">
-<ui5-label class="samples-big-margin-right"  required show-colon>Account</ui5-label>
-<br>
-<ui5-input placeholder="Account name" [(ngModel)]="accountName" required origami></ui5-input>
-<br>
-<ui5-label class="samples-big-margin-right" for="myInput" required show-colon>environment</ui5-label>
-<br>
-<ui5-input id="myInput" placeholder="Environment" required></ui5-input>
-<br>
-<ui5-label class="samples-big-margin-right" for="myInput" required show-colon>UnlimitedQuantity</ui5-label>
-<br>
-<ui5-select class="select">
-	<ui5-option icon="true">True</ui5-option>
-	<ui5-option icon="false">False</ui5-option>
-</ui5-select>
-<br>
-<ui5-label class="samples-big-margin-right" for="myInput" required show-colon>SkuId</ui5-label>
-<br>
-<ui5-input id="myInput" placeholder="SkuId" required></ui5-input>
-<br>
-<ui5-label class="samples-big-margin-right" for="myInput" required show-colon>WarehouseId</ui5-label>
-<br>
-<ui5-input id="myInput" placeholder="WarehouseId" required></ui5-input>
-<br>
-<ui5-label class="samples-big-margin-right" for="myInput" required show-colon>dateUtcOnBalanceSystem</ui5-label>
-<br>
-<ui5-input id="myInput" placeholder="" required></ui5-input>
-<br>
-<ui5-label class="samples-big-margin-right" for="myInput" required show-colon>X-VTEX-API-AppKey</ui5-label>
-<br>
-<ui5-input id="myInput" placeholder="X-VTEX-API-AppKey" required></ui5-input>
-<br>
-<ui5-label class="samples-big-margin-right" for="myInput" required show-colon>X-VTEX-API-AppToken</ui5-label>
-<br>
-<ui5-input id="myInput" placeholder="X-VTEX-API-AppToken" required></ui5-input>
-<br>
-<br>
-<ui5-button design="Emphasized" (click)="getNombre()">Enviar</ui5-button>
-<br>
-</div> -->
-<div class="row" id="row">
-    <div class="col s10">
-      <div class="row">
-        <div class="input-field col s4">
-          <i class="material-icons prefix">person</i>
-          <input type="text" id="autocomplete-input" class="autocomplete" input [(ngModel)]="accountName">
-          <label for="autocomplete-input">AccountName*</label>
-        </div>
-        <div class="input-field col s4">
-            <i class="material-icons prefix">public</i>
-            <input type="text" id="autocomplete-input" class="autocomplete" input [(ngModel)]="environment">
-            <label for="autocomplete-input">Environment*</label>
-          </div>
-          
-            <div class="input-field col s12 m6">
-              <select class="icons">
-                <option value="" disabled selected>UnlimitedQuantity</option>
-                <option value="" >True</option>
-                <option value="" >False</option>
-                
-              </select>
-              <label>UnlimitedQuantity</label>
-            
-          </div>
-          <div class="input-field col s4">
-            <i class="material-icons prefix">request_quote</i>
-            <input type="text" id="autocomplete-input" class="autocomplete" input [(ngModel)]="skuId">
-            <label for="autocomplete-input">skuId</label>
-          </div>
-          <div class="input-field col s4">
-            <i class="material-icons prefix">request_quote</i>
-            <input type="text" id="autocomplete-input" class="autocomplete" input [(ngModel)]="warehouseId">
-            <label for="autocomplete-input">warehouseId</label>
-          </div>
-          <div class="input-field col s4">
-            <i class="material-icons prefix">vpn_key</i>
-            <input type="text" id="autocomplete-input" class="autocomplete" input [(ngModel)]="vtexApiKey">
-            <label for="autocomplete-input">X-VTEX-API-AppKey</label>
-          </div>
-          <div class="input-field col s4">
-            <i class="material-icons prefix">token</i>
-            <input type="text" id="autocomplete-input" class="autocomplete" input [(ngModel)]="vtexApiToken">
-            <label for="autocomplete-input">X-VTEX-API-AppToken</label>
-          </div>
-      </div>
-    </div>
-  </div>
-  <a class="waves-effect waves-light btn"  id="boton2" (click)="setInventory()">Enviar</a>
+
+    <ui5-input [(ngModel)]="accountName" id="accountI" placeholder="accountName*" origami></ui5-input>
+
+
+    <ui5-input [(ngModel)]="environment" id="environmentI" placeholder="environment*" origami></ui5-input>
+
+
+    <ui5-input  [(ngModel)]="skuId" id="skuI"  placeholder="skuId*" origami></ui5-input>
+
+    <ui5-input id="skuButton" [(ngModel)]="warehouseId" id="warehouseI" placeholder="warehouseId*" origami></ui5-input>
+
+
+    <ui5-input [(ngModel)]="vtexApiKey" placeholder="vtexApikey*" id="apiKeyI" origami></ui5-input>
+
+
+    <ui5-input [(ngModel)]="vtexApiToken" placeholder="vtexApiToken*" id="apiTokenI" origami></ui5-input>
+
+    <br>
+    <br>
+
+
+  <ui5-label style="margin-left: 2%;" class="samples-big-margin-right" for="myInput" required show-colon>Upload File</ui5-label>
+  <br>
+  <ui5-button style="margin-left: 2%"><input type="file" (change) = "handleUpload($event)"></ui5-button>
+  <br>
+  <ui5-button style="margin-left: 2%; margin-top:2%" class="boton2"><a  (click)= "setInventory(chunk)">Enviar</a></ui5-button>

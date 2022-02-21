@@ -1,16 +1,29 @@
-#imagen-invoice{
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  margin-top: 35%;
-  margin-left: 43%;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
+
+
+#accountI{
+  margin-left: 2%;
 }
 
-#boton2{
-  margin-top: 25%;
-  margin-left: 50%;
-  width: 10%;
-  
+#environmentI{
+  margin-left: 1%;
+}
+#orderI{
+  margin-left: 1%;
+}
+#warehouseI{
+  margin-left: 1%;
+}
+#skuI{
+  margin-left: 1%;
+}
+#apiKeyI{
+  margin-left: 1%;
+}
+#apiTokenI{
+  margin-left: 2%;
+  margin-top: 1%;
+}
+
+.boton2{
+  margin-left: 2%;
 }

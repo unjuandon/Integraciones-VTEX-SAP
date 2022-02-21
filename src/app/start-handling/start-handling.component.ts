@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { StartService } from '../services/start.service';
-
+import "@ui5/webcomponents/dist/Button.js";
+import "@ui5/webcomponents/dist/Label.js";
+import "@ui5/webcomponents/dist/Input.js";
 @Component({
   selector: 'app-start-handling',
   templateUrl: './start-handling.component.html',
@@ -10,16 +12,16 @@ import { StartService } from '../services/start.service';
 export class StartHandlingComponent implements OnInit {
 
 
- 
-    accountName='' 
-    environment='' 
+
+    accountName=''
+    environment=''
     orderId=''
     vtexApiKey=''
     vtexApiToken=''
 
-  
 
- 
+
+
   saveData(){
     alert('Data saved!')
   }
@@ -33,7 +35,7 @@ export class StartHandlingComponent implements OnInit {
   onStart(){
 
     this.startService.startHandling(this.accountName, this.orderId, this.vtexApiKey, this.vtexApiToken).subscribe(data =>{
-      console.log(data);      
+      console.log(data);
     })
     console.log(this.accountName, this.environment, this.vtexApiKey, this.vtexApiToken)
 
@@ -45,9 +47,9 @@ export class StartHandlingComponent implements OnInit {
   //     console.log(data)
   //   })
   // }
-    
+
   }
- 
+
 
 
 }

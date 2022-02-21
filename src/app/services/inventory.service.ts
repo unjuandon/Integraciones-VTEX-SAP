@@ -12,8 +12,9 @@ export class InventoryService {
 
 
 
+
   sendInventory(account:string, skuId:string, warehouseId:string, vtexApiKey:string, vtexApiToken:string):Observable<any>{
-    const url = 'api/logistics/pvt/inventory/skus/'+`${skuId}`+'/warehouses'+`${warehouseId}`
+    const url = 'api/logistics/pvt/inventory/skus/'+`${skuId}`+'/warehouses/'+`${warehouseId}`
     const options = new HttpHeaders({
       Accept: 'application/json',
       'Content-Type': 'application/json',
@@ -21,10 +22,16 @@ export class InventoryService {
       'X-VTEX-API-AppToken': vtexApiToken
     });
 
-    console.log(url)
-    const body = JSON.stringify('')
-    
-    const data = this.http.put(url, body, {'headers': options})    
+    console.log("La url que pertenece al endpoint es: ", url)
+
+
+
+    const body = { unlimitedQuantity: 'false',
+    dateUtcOnBalanceSystem: 'null',
+    quantity: '101'}
+
+
+    const data = this.http.put(url,body, {'headers': options})
     return data
   }
 

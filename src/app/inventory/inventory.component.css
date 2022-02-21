@@ -1,4 +1,34 @@
-.contenedor{
+/* .contenedor{
     margin-top: 5%;
     margin-left: 2%;
+} */
+
+/* #skuButton{
+  width: 20%;
+  margin-left: 35%;
+}
+ */
+
+#accountI{
+  margin-left: 2%;
+}
+
+#environmentI{
+  margin-left: 1%;
+}
+#skuI{
+  margin-left: 1%;
+}
+#warehouseI{
+  margin-left: 1%;
+}
+#skuI{
+  margin-left: 1%;
+}
+#apiKeyI{
+  margin-left: 1%;
+}
+#apiTokenI{
+  margin-left: 2%;
+  margin-top: 1%;
 }

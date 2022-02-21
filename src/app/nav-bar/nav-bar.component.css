@@ -1,3 +1,32 @@
-#trigger{
-    background-color: #0096cc;
+.container{
+  background-color: ;
+  width: 100%;
+}
+
+#botonFeed{
+  margin-left: 22%;
+  margin-top: 1%;
+}
+
+#botonStart{
+  margin-left: 2%;
+  margin-top: 1%;
+}
+
+#botonCancel{
+  margin-left: 2%;
+  margin-top: 1%;
+}
+#botonInventory{
+  margin-left: 2%;
+  margin-top: 1%;
+}
+#botonInvoice{
+  margin-left: 2%;
+  margin-top: 1%;
+}
+
+#botonGetO{
+  margin-left: 2%;
+  margin-top: 1%;
 }

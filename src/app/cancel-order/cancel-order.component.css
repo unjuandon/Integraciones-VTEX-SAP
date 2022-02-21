@@ -1,13 +1,33 @@
-#boton2{
-  margin-top: 45%;
-  margin-left: 44%;
-  background-color: #f81414;
+#accountI{
+  margin-left: 2%;
 }
-#imagen-cancel{
-  width: 50%;
-  height: 70%;
-  position: absolute;
-  margin-top: 35%;
-  margin-left: 45%;
-  transform: translate(-50%, -50%);
+
+#environmentI{
+  margin-left: 1%;
+}
+#orderI{
+  margin-left: 1%;
+}
+#warehouseI{
+  margin-left: 1%;
+}
+#orderI{
+  margin-left: 1%;
+}
+#apiKeyI{
+  margin-left: 1%;
+}
+#apiTokenI{
+  margin-left: 2%;
+  margin-top: 1%;
+}
+
+#reasonI{
+  margin-left: 2%;
+  margin-top: 1%;
+}
+
+
+.boton2{
+  margin-left: 2%;
 }

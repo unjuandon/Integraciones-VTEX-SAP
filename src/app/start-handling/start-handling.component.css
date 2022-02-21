@@ -1,27 +1,29 @@
-#row {
-    position: absol;
-    margin-top: 2%;
-    margin-left: 15%;
-    
+
+
+#accountI{
+  margin-left: 2%;
 }
 
-#boton2{
-    position: absolute;
-    width: 20%;
-    top: 85%;
-    right: 50%;
-    left: 48%;    
-    transform: translate(-50%, -50%);
-    background-color: #0096cc;
-    color: white;
-    border-radius: 4px;
+#environmentI{
+  margin-left: 1%;
 }
-#imagen-banda{
-    width: 70%;
-    height: 60%;
-    position: absolute;
-    margin-top: 27%;
-    margin-left: 43%;
-    transform: translate(-50%, -50%);
+#orderI{
+  margin-left: 1%;
+}
+#warehouseI{
+  margin-left: 1%;
+}
+#skuI{
+  margin-left: 1%;
+}
+#apiKeyI{
+  margin-left: 1%;
+}
+#apiTokenI{
+  margin-left: 2%;
+  margin-top: 1%;
 }
 
+.boton2{
+  margin-left: 2%;
+}

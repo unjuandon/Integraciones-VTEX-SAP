@@ -6,9 +6,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core'
+import { OrigamiModule } from '@codebakery/origami';
 import { OrigamiFormsModule } from '@codebakery/origami/forms';
+
+
 import {APP_INITIALIZER  } from '@angular/core';
-import CheckBox from "@ui5/webcomponents/dist/CheckBox";
+
 
 
 
@@ -25,11 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InventoryComponent } from './inventory/inventory.component';
 import { PricesListComponent } from './prices-list/prices-list.component';
 
-function onAppInit(): () => Promise<any> {
-  return (): Promise<any> => {
-    return CheckBox.define();
-  };
-}
+
 
 
 @NgModule({
@@ -44,8 +43,8 @@ function onAppInit(): () => Promise<any> {
     InvoiceComponent,
     InventoryComponent,
     PricesListComponent,
-    
-   
+
+
   ],
   imports: [
     BrowserModule,
@@ -55,22 +54,17 @@ function onAppInit(): () => Promise<any> {
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatTableModule, 
-    
-    
-  
-
+    MatTableModule,
+    OrigamiFormsModule
   ],
+
+
 
   schemas:[
     CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: onAppInit,
-      multi: true
-    }
+
   ],
   bootstrap: [AppComponent]
 })

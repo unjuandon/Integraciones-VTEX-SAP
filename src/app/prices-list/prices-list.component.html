@@ -1,1 +1,23 @@
-<p>prices-list works!</p>
+
+    <br>
+    <ui5-label class="samples-big-margin-right" for="myInput" required show-colon>accountName</ui5-label>
+    <br>
+    <ui5-input [(ngModel)]="accountName" placeholder="accountName" origami></ui5-input>
+    <br>
+    <ui5-label class="samples-big-margin-right" for="myInput" required show-colon>environment</ui5-label>
+    <br>
+    <ui5-input [(ngModel)]="environment" placeholder="environment" origami></ui5-input>
+    <br>
+    <ui5-label class="samples-big-margin-right" for="myInput" id="Item" required show-colon>itemId</ui5-label>
+    <br>
+    <ui5-input id="skuButton" [(ngModel)]="itemId" placeholder="itemId" origami></ui5-input>
+    <br>
+    <ui5-label class="samples-big-margin-right" for="myInput" required show-colon>vtexApiKey</ui5-label>
+    <br>
+    <ui5-input [(ngModel)]="vtexApiKey" placeholder="vtexApikey" origami></ui5-input>
+    <br>
+    <ui5-label class="samples-big-margin-right" for="myInput" required show-colon>vtexApiToken</ui5-label>
+    <br>
+    <ui5-input [(ngModel)]="vtexApiToken" placeholder="vtexApiToken" origami></ui5-input>
+    <br>
+  <ui5-button class="boton2" (click)="getPrice()"><a>Enviar</a></ui5-button>

@@ -19,15 +19,15 @@ import { GetOrderService } from '../services/get-order.service';
 
 
 
-var options = { 
+var options = {
   fieldSeparator: ";",
   decimalseparator: '.',
   quoteStrings:'',
-  showLabels: false, 
+  showLabels: false,
   showTitle: false,
   title: false,
-  useBom: false,  
-  noDownload: false, 
+  useBom: false,
+  noDownload: false,
   headers:  false,
   useHeader: false,
   nullToEmptyString: false,
@@ -74,26 +74,26 @@ export class GetOrderComponent implements OnInit {
 
 
   getOrder(){
-   var csv = this.getOrderService.getOrderService(this.accountName, this.orderId, this.vtexApiKey, this.vtexApiToken).subscribe( res  =>{ 
+   var csv = this.getOrderService.getOrderService(this.accountName, this.orderId, this.vtexApiKey, this.vtexApiToken).subscribe( res  =>{
     var aux = ["",res.orderId,
      "",
      res.clientProfileData.document,
      res.creationDate,
-     res.shippingData.address.receiverName, 
-     res.shippingData.address.street, 
+     res.shippingData.address.receiverName,
+     res.shippingData.address.street,
      res.shippingData.address.postalCode,
-     res.shippingData.address.state, 
+     res.shippingData.address.state,
      res.shippingData.address.country,
      res.clientProfileData.phone,
      "",
-     res.clientProfileData.email, 
+     res.clientProfileData.email,
      res.clientProfileData.document,
      res.clientProfileData.firstName,
      res.clientProfileData.lastName,
      res.shippingData.address.street,
      res.shippingData.address.postalCode,
      res.shippingData.address.state,
-     res.shippingData.address.country,    
+     res.shippingData.address.country,
      res.clientProfileData.phone,
      "",
      res.clientProfileData.email,
@@ -113,14 +113,14 @@ export class GetOrderComponent implements OnInit {
      ] ;
     console.log(res.items[0])
     var res = res;
-    
-    var data = [{              
+
+    var data = [{
     }];
-    const dataFinal = data.push(aux);  
-    
+    const dataFinal = data.push(aux);
+
     var hoy = new Date();
 
-    var hora = hoy.getDate() + '_' + hoy.getHours() + '_' + hoy.getMinutes() 
+    var hora = hoy.getDate() + '_' + hoy.getHours() + '_' + hoy.getMinutes()
 
     var nombre = JSON.stringify(hora)
 
@@ -131,7 +131,7 @@ export class GetOrderComponent implements OnInit {
     console.log(create)
 
     console.log(data)
-  
+
   })
 }
 

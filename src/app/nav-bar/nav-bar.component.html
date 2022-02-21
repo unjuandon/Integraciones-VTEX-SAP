@@ -1,4 +1,4 @@
-
+<!--
   <nav>
     <div class="nav-wrapper" style ="background-color: white;" >
       <a routerLink='/home'>
@@ -22,6 +22,41 @@
     <li><a href="/get-order" routerLink="get-order">Get Order API</a></li>
     <li><a href="/inventory" routerLink="inventory">Inventory API</a></li>
       <li><a href="/prices-list" routerLink="prices-list">Prices List API</a></li>
-  </ul>
-  <a href="#" data-target="slide-out" id="trigger" class="sidenav-trigger" ><a class="waves-effect waves-light btn" id="trigger" style="margin-top: 0.5%;">Catalog Api</a></a>
+  </ul> -->
+  <!-- <a href="#" data-target="slide-out" id="trigger" class="sidenav-trigger" ><a class="waves-effect waves-light btn" id="trigger" style="margin-top: 0.5%;">Catalog Api</a></a> -->
+
+<ui5-shellbar
+	id="shellbar"
+	primary-title="Integrador"
+	secondary-title="Integrador VTEX-SAP"
+	notifications-count="0"
+	show-product-switch
+	show-co-pilot
+>
+
+	<ui5-avatar slot="profile">
+	 <a href="/" routerLink="/"><img src="../../assets/mqa.png" href="/" routerLink="/"></a>
+	</ui5-avatar>
+
+
+	<img slot="logo" src="../../assets/mqa.png"/>
+</ui5-shellbar>
+
+
+<div class="container">
+
+
+<ui5-button  id="botonFeed" routerLink="/feed">Feed</ui5-button>
+<ui5-button  id="botonStart" design="Positive" routerLink="/start-handling">Start handling</ui5-button>
+<ui5-button  id="botonCancel" design="Negative" routerLink="/cancel-order">Cancel order</ui5-button>
+<ui5-button  id="botonInventory" design="Emphasized" routerLink="/inventory">Inventory</ui5-button>
+<!-- <ui5-button  id="botonInvoice" design="Attention" routerLink="/invoice">Invoice</ui5-button> -->
+<ui5-button  id="botonGetO" design="Positive" routerLink="/get-order">Get Order</ui5-button>
+
+</div>
+
+
+
+
+
 

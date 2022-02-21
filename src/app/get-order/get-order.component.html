@@ -1,11 +1,11 @@
 <!-- <img id="imagen-invoice" src="../../assets/order.png"> -->
-<div class="row" id="row">
+<!-- <div class="row" id="row">
     <div class="col s10">
       <div class="row">
         <div class="input-field col s4">
           <i class="material-icons prefix">person</i>
-          <input type="text" id="autocomplete-input" class="autocomplete" input [(ngModel)]="accountName"> 
-                
+          <input type="text" id="autocomplete-input" class="autocomplete" input [(ngModel)]="accountName">
+
         </div>
 
 
@@ -33,6 +33,24 @@
       </div>
       <h1 style="text-align:center">Order</h1>
       <!-- <a class="waves-effect waves-light btn"  id="boton2" (click)="getOrder()">Get order</a> -->
-      <ui5-button id="boton2" (click)="getOrder()">Get order</ui5-button>
+      <!-- <ui5-button id="boton2" (click)="getOrder()">Get order</ui5-button>
     </div>
-  </div>
+  </div> -->
+
+  <h3 style="text-align: center;">Get Order</h3>
+
+  <h6 style="text-align: center;">Lists order details by searching through order ID.</h6>
+
+  <ui5-input [(ngModel)]="accountName" id="accountI" placeholder="accountName" origami></ui5-input>
+
+  <ui5-input [(ngModel)]="environment" id="environmentI" placeholder="environment" origami></ui5-input>
+
+  <ui5-input [(ngModel)]="orderId" id="orderI" placeholder="order Id" origami></ui5-input>
+
+  <ui5-input [(ngModel)]="vtexApiKey" id="apiKeyI" placeholder="vtexApikey" origami></ui5-input>
+
+  <ui5-input [(ngModel)]="vtexApiToken" id="apiTokenI" placeholder="vtexApiToken" origami></ui5-input>
+  <br>
+  <br>
+  <ui5-button class="boton2" design="Positive" (click)="getOrder()">Get order</ui5-button>
+  <br>

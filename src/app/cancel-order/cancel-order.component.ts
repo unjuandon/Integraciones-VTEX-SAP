@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CancelService } from '../services/cancel.service';
+import "@ui5/webcomponents/dist/Button.js";
+import "@ui5/webcomponents/dist/Label.js";
+import "@ui5/webcomponents/dist/Input.js";
 
 @Component({
   selector: 'app-cancel-order',
@@ -30,10 +33,10 @@ export class CancelOrderComponent implements OnInit {
 
     if(confirmacion == "si")
     {
-      this.cancelService.cancelOrder(this.account,this.orderId, this.vtexApiKey, this.vtexApiToken, this.reason).subscribe(data => 
+      this.cancelService.cancelOrder(this.account,this.orderId, this.vtexApiKey, this.vtexApiToken, this.reason).subscribe(data =>
         console.log(data))
       console.log(this.account, this.orderId, this.vtexApiKey, this.vtexApiToken)
-      
+
       alert('se ha cancelado su pedido');
     }
 
@@ -42,7 +45,7 @@ export class CancelOrderComponent implements OnInit {
     }
     }
 
-    
+
   }
 
 

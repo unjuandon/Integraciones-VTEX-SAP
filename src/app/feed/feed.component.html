@@ -1,7 +1,7 @@
-<div class="contenedor">
-    <img style="width: 100%;" src="../../assets/cohete.png">
+<!-- <div class="contenedor"> -->
+    <!-- <img style="width: 100%;" src="../../assets/cohete.png"> -->
 
-    <h2 class="centrado">Feed</h2>
+    <!-- <h2 class="centrado">Feed</h2>
     <h3 class="texto">Retrieve items from feed queue.</h3>
       <div class="feedForm">
         <div class="row" id="row">
@@ -10,7 +10,7 @@
               <div class="input-field col s4">
                 <i class="material-icons prefix" style="color:white;">person</i>
                 <input type="text" id="autocomplete-input" style="color: white;" class="autocomplete"  [(ngModel)]="account">
-                <label for="autocomplete-input">AccountName*</label>                    
+                <label for="autocomplete-input">AccountName*</label>
               </div>
               <div class="input-field col s4">
                   <i class="material-icons prefix" style="color: white;">public</i>
@@ -21,7 +21,7 @@
                   <i class="material-icons prefix" style="color: white;">request_quote</i>
                   <input type="text" id="autocomplete-input" class="autocomplete" style="color: white;"  [(ngModel)]="maxLot">
                   <label for="autocomplete-input">Max Lot*</label>
-                </div>   
+                </div>
                 <div class="input-field col s4">
                   <i class="material-icons prefix" style="color: white;">vpn_key</i>
                   <input type="text" id="autocomplete-input" class="autocomplete" style="color: white;" input [(ngModel)]="vtexApiKey">
@@ -48,9 +48,28 @@
               </div>
             </div>
           </div>
-      </div>      
-      </div>    
+      </div>
+      </div>
 </div>
 
 
+ -->
 
+
+ <h3 style="text-align: center;">Feed</h3>
+
+ <h6 style="text-align: center;">Retrieve items from feed queue.</h6>
+
+ <ui5-input [(ngModel)]="account" id="accountI" placeholder="accountName*" origami></ui5-input>
+
+ <ui5-input [(ngModel)]="environment" id="environmentI" placeholder="environment*" origami></ui5-input>
+
+ <ui5-input [(ngModel)]="maxLot" id="maxLotI" placeholder="maxLot*" origami></ui5-input>
+
+ <ui5-input [(ngModel)]="vtexApiKey" id="apiKeyI" placeholder="vtexApikey*" origami></ui5-input>
+
+ <ui5-input [(ngModel)]="vtexApiToken" id="apiTokenI" placeholder="vtexApiToken*" origami></ui5-input>
+ <br>
+ <br>
+ <ui5-button class="boton2" (click)="obtenerFeed()">Consultar Feed</ui5-button>
+ <br>
