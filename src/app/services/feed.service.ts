@@ -15,7 +15,7 @@ export class FeedService {
 
   constructor(private http: HttpClient)  { }
 
-  getFeed(account:string,maxLot:string,vtexApiKey:string,vtexApiToken:string):Observable<any>{    
+  getFeed(account:string,environment:string,maxLot:string,vtexApiKey:string,vtexApiToken:string):Observable<any>{    
     const url = 'api/api/orders/feed?maxlot='+`${maxLot}`;
     const options = new HttpHeaders ({          
         Accept:'application/json',

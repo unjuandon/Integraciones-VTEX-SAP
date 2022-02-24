@@ -13,6 +13,9 @@
 #warehouseI{
   margin-left: 1%;
 }
+#maxLotI{
+  margin-left: 1%;
+}
 #skuI{
   margin-left: 1%;
 }
@@ -22,7 +25,7 @@
 #apiTokenI{
   margin-left: 2%;
   margin-top: 1%;
-}
+} 
 
 .boton2{
   margin-left: 2%;

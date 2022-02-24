@@ -60,7 +60,7 @@ constructor(private feedService: FeedService)
   obtenerFeed()
   {
     
-     var csvFeed=this.feedService.getFeed(this.account,this.maxLot, this.vtexApiKey, this.vtexApiToken).subscribe(res => {
+     var csvFeed=this.feedService.getFeed(this.account, this.environment,this.maxLot, this.vtexApiKey, this.vtexApiToken).subscribe(res => {
       console.log(res);
       var res = res;
       var data = [{

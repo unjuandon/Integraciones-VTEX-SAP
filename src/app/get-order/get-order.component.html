@@ -32,7 +32,7 @@
           </div>
       </div>
       <h1 style="text-align:center">Order</h1>
-      <!-- <a class="waves-effect waves-light btn"  id="boton2" (click)="getOrder()">Get order</a> -->
+       <a class="waves-effect waves-light btn"  id="boton2" (click)="getOrder()">Get order</a> -->
       <!-- <ui5-button id="boton2" (click)="getOrder()">Get order</ui5-button>
     </div>
   </div> -->
@@ -47,10 +47,17 @@
 
   <ui5-input [(ngModel)]="orderId" id="orderI" placeholder="order Id" origami></ui5-input>
 
+  <ui5-input [(ngModel)]="maxLot" id="maxLotI" placeholder="Max lot" origami></ui5-input>
+
   <ui5-input [(ngModel)]="vtexApiKey" id="apiKeyI" placeholder="vtexApikey" origami></ui5-input>
 
   <ui5-input [(ngModel)]="vtexApiToken" id="apiTokenI" placeholder="vtexApiToken" origami></ui5-input>
   <br>
   <br>
-  <ui5-button class="boton2" design="Positive" (click)="getOrder()">Get order</ui5-button>
+  <ui5-button class="boton2" design="Positive" (click)="getFeed()">Descargar órdenes del feed</ui5-button>
   <br>
+  <br>
+  <ui5-button class="boton2" design="Positive" (click)="getOrder()">Get order           </ui5-button>
+  <br>
+
+
