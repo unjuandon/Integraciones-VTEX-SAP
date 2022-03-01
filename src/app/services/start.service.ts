@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable} from 'rxjs';
 import { StartHandlingComponent } from '../start-handling/start-handling.component';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,9 @@ export class StartService {
   constructor(private http: HttpClient) { }
 
 
-  startHandling(account:string,orderId:string,vtexApiKey:string,vtexApiToken:string):Observable<any>{  
+  startHandling(account:string,environment:string,orderId:string,vtexApiKey:string,vtexApiToken:string):Observable<any>{  
 
-    const url = 'api/api/oms/pvt/orders/'+`${orderId}`+'/start-handling';
+    const url = 'https://'+`${account}`+'.'+`${environment}`+'.com.br/api/oms/pvt/orders/'+`${orderId}`+'/start-handling';
     const  options = new HttpHeaders ({     
                
         Accept: 'application/json',

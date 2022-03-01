@@ -90,7 +90,7 @@ export class InventoryComponent implements OnInit {
 
   setInventory(chunk){
 
-    this.Inventory.sendInventory(this.accountName, this.skuId, this.warehouseId, this.vtexApiKey, this.vtexApiToken).subscribe(res =>
+    this.Inventory.sendInventory(this.accountName, this.environment, this.skuId, this.warehouseId, this.vtexApiKey, this.vtexApiToken).subscribe(res =>
       {
 
         console.log(res)

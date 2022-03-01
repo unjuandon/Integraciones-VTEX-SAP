@@ -12,8 +12,8 @@ export class GetOrderService {
   constructor(private http: HttpClient) { }
 
 
-   getOrderService(account:string, orderId:string, vtexApiKey:string, vtexApiToken:string):Observable<any>{
-    const url = 'api/api/oms/pvt/orders/'+`${orderId}`
+   getOrderService(account:string, environment:string, orderId:string, vtexApiKey:string, vtexApiToken:string):Observable<any>{
+    const url = 'https://'+`${account}`+'.'+`${environment}`+'vtexcommercestable.com.br/api/oms/pvt/orders/'+`${orderId}`
     const options = new HttpHeaders({
       Accept: 'application/json',
       'Content-Type': 'application/json',

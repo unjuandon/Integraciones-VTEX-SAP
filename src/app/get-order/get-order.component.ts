@@ -92,7 +92,7 @@ export class GetOrderComponent implements OnInit {
     this.Feed.getFeed(this.accountName, this.environment, this.maxLot, this.vtexApiKey, this.vtexApiToken).subscribe(response => {
 
       console.log(response[0].orderId)
-      console.log("hola mamacuco")
+      
 
       var data = [{}];       
       
@@ -127,7 +127,7 @@ export class GetOrderComponent implements OnInit {
   //  }) 
 
    
-   var csv = this.getOrderService.getOrderService(this.accountName, this.orderId, this.vtexApiKey, this.vtexApiToken).subscribe( res  =>{
+   var csv = this.getOrderService.getOrderService(this.accountName, this.environment, this.orderId, this.vtexApiKey, this.vtexApiToken).subscribe( res  =>{
    
    
     var aux = ["",res.orderId,

@@ -13,8 +13,8 @@ export class InventoryService {
 
 
 
-  sendInventory(account:string, skuId:string, warehouseId:string, vtexApiKey:string, vtexApiToken:string):Observable<any>{
-    const url = 'api/logistics/pvt/inventory/skus/'+`${skuId}`+'/warehouses/'+`${warehouseId}`
+  sendInventory(account:string, environment:string, skuId:string, warehouseId:string, vtexApiKey:string, vtexApiToken:string):Observable<any>{
+    const url = 'https://'+`${account}`+'.'+`${environment}`+'vtexcommercestable.com.br/api/logistics/pvt/inventory/skus/'+`${skuId}`+'/warehouses/'+`${warehouseId}`
     const options = new HttpHeaders({
       Accept: 'application/json',
       'Content-Type': 'application/json',

@@ -34,7 +34,7 @@ export class StartHandlingComponent implements OnInit {
 
   onStart(){
 
-    this.startService.startHandling(this.accountName, this.orderId, this.vtexApiKey, this.vtexApiToken).subscribe(data =>{
+    this.startService.startHandling(this.accountName, this.environment, this.orderId, this.vtexApiKey, this.vtexApiToken).subscribe(data =>{
       console.log(data);
     })
     console.log(this.accountName, this.environment, this.vtexApiKey, this.vtexApiToken)
